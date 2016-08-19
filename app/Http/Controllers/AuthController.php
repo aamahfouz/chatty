@@ -28,4 +28,20 @@ class AuthController extends Controller {
                 ->route('home')
                 ->with('info','Your account has been created and you can now sign in');
     }
+
+    public function getSignin()
+    {
+        return view ('auth.signin');
+    }
+
+    public function postSignin(Request $request)
+    {       
+        $this->validate($request, [
+            'email' => 'required',
+             'password' => 'required'
+             ]);
+
+        dd('all ok');
+
+    }
 }

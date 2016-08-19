@@ -20,6 +20,14 @@ Route::post('/signup', [
 	'uses' => '\Chatty\http\Controllers\AuthController@postSignup',	
 ]);
 
+Route::get('/signin', [
+	'uses' => '\Chatty\http\Controllers\AuthController@getSignin',
+	'as'=> 'auth.signin',
+]);
+
+Route::post('/signin', [
+	'uses' => '\Chatty\http\Controllers\AuthController@postSignin',	
+]);
 
 Route::get('/alert',function(){
 	return redirect()->route('home')->with('info', 'You have signed up!');	
