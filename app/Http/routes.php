@@ -29,6 +29,11 @@ Route::post('/signin', [
 	'uses' => '\Chatty\http\Controllers\AuthController@postSignin',	
 ]);
 
+Route::get('/signout', [
+	'uses' => '\Chatty\http\Controllers\AuthController@getSignout',
+	'as'=> 'auth.signout',
+]);
+
 Route::get('/alert',function(){
 	return redirect()->route('home')->with('info', 'You have signed up!');	
 });

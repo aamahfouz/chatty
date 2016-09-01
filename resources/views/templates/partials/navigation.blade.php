@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Chatty</a>
+			<a class="navbar-brand" href="{{route('home')}}">Chatty</a>
 		</div>
 		<div class="collapse navbar-collapse">
 			@if (Auth::check())
@@ -21,7 +21,7 @@
 			<li><a href="#">{{ Auth::user()->getNameOrUsername() }}
 			</a></li>
 			<li><a href="#">Update profile</a></li>
-			<li><a href="#">Sign out</a></li>
+			<li><a href="{{ route('auth.signout') }}">Sign out</a></li>
 			@else
 			<li><a href="{{ route('auth.signup') }}">Sign up</a></li>
 			<li><a href="{{ route('auth.signin') }}">Sign in</a></li>
