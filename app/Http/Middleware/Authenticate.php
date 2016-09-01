@@ -22,7 +22,8 @@ class Authenticate
                 return response('Unauthorized.', 401);
             }
 
-            return redirect()->guest('login');
+            // return redirect()->route('auth.signin');
+            return redirect()->guest('auth.signin');
         }
 
         return $next($request);
