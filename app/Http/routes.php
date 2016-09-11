@@ -38,6 +38,14 @@ Route::get('/signout', [
 	'as'=> 'auth.signout',
 ]);
 
+/**
+ *	Search
+ */
+Route::get('/search', [
+	'uses' => '\Chatty\http\Controllers\SearchController@getResults',
+	'as'=> 'search.results',
+]);
+
 Route::get('/alert',function(){
 	return redirect()->route('home')->with('info', 'You have signed up!');	
 });

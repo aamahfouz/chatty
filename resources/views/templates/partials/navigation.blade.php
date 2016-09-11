@@ -9,7 +9,7 @@
 				<li><a href="#">Timeline</a></li>
 				<li><a href="#">Friends</a></li>
 			</ul>
-			<form action="#" class="navbar-form navbar-left" role="search">
+			<form action="{{route('search.results')}}" class="navbar-form navbar-left" role="search">
 				<div class="form-group">
 					<input class="form-control" type="text" name="query" placeholder="Find People"></input>					
 				</div>
