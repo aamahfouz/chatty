@@ -46,6 +46,14 @@ Route::get('/search', [
 	'as'=> 'search.results',
 ]);
 
+/**
+ *	User Profile
+ */
+Route::get('/user/{username}', [
+	'uses' => '\Chatty\http\Controllers\ProfileController@getProfile',
+	'as'=> 'profile.index',
+]);
+
 Route::get('/alert',function(){
 	return redirect()->route('home')->with('info', 'You have signed up!');	
 });
